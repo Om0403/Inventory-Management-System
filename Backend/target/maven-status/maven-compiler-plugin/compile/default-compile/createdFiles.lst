@@ -1,0 +1,11 @@
+com\inventory\service\ProductService.class
+com\inventory\repository\ProductRepository.class
+com\inventory\controller\AuthController.class
+com\inventory\controller\ProductionController.class
+com\inventory\controller\LoginRequest.class
+com\inventory\controller\ProductController.class
+com\inventory\model\Product.class
+com\inventory\InventoryApplication.class
+com\inventory\repository\ProductionRepository.class
+com\inventory\service\ProductionService.class
+com\inventory\model\Production.class
