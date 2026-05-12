@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8081";
+const API = "https://inventory-management-system-hlso.onrender.com";
 
 export const loginUser = (data) => axios.post(`${API}/auth/login`, data);
 export const getProducts = () => axios.get(`${API}/products`);
