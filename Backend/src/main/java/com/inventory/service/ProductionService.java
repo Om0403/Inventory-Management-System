@@ -28,9 +28,16 @@ public class ProductionService {
 
         Product product = productRepo
                 .findByProductNameIgnoreCaseAndSize(finalName, finalSize)
-                .orElseThrow(() -> new RuntimeException(
-                        "Product not found for Product: " + finalName + " and Size: " + finalSize
-                ));
+                .orElse(null);
+
+        if (product == null) {
+            product = new Product();
+            product.setProductName(finalName);
+            product.setSize(finalSize);
+            product.setQuantity(0);
+
+            product = productRepo.save(product);
+        }
 
         product.setQuantity(product.getQuantity() + production.getQuantity());
         productRepo.save(product);
